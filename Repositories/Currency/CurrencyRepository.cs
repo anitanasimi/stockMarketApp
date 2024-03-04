@@ -2,6 +2,7 @@
 using StockMarketWithSignalR.Database;
 using StockMarketWithSignalR.Entities;
 using StockMarketWithSignalR.Enums;
+using System.Linq;
 
 namespace StockMarketWithSignalR.Repositories.Currency
 {
@@ -107,8 +108,14 @@ namespace StockMarketWithSignalR.Repositories.Currency
                 .Where(m => m.CurrencyId == currency.Id)
                 .ToListAsync();
 
-            var buyCount = currencyStatics.Count(s => s.OperationType == OperationType.Buy);
-            var sellCount = currencyStatics.Count(s => s.OperationType == OperationType.Sell);
+            decimal buyCount = currencyStatics
+                .Where(s => s.OperationType == OperationType.Buy)
+                .Select(s=>s.Count)
+                .Sum();
+            decimal sellCount = currencyStatics
+                .Where(s => s.OperationType == OperationType.Sell)
+                .Select(s => s.Count)
+                .Sum();
 
             var res = buyCount - sellCount;
 

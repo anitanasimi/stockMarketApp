@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StockMarketWithSignalR")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c50db8de62346a8a32ab0d156aa660efaf4f0f9")]
 [assembly: System.Reflection.AssemblyProductAttribute("StockMarketWithSignalR")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StockMarketWithSignalR")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

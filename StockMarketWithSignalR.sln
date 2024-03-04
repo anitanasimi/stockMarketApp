@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMarketWithSignalR", "StockMarketWithSignalR.csproj", "{FAAB073C-EEDF-4AE6-A161-FDB68AF66520}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockMarketWithSignalR", "StockMarketWithSignalR.csproj", "{FAAB073C-EEDF-4AE6-A161-FDB68AF66520}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "stockmarketfrontend", "..\StockMarketFrontend\stockmarketfrontend.esproj", "{066EF31F-E8CB-45CA-9DD7-52F81D85A7C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,12 @@ Global
 		{FAAB073C-EEDF-4AE6-A161-FDB68AF66520}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAAB073C-EEDF-4AE6-A161-FDB68AF66520}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAAB073C-EEDF-4AE6-A161-FDB68AF66520}.Release|Any CPU.Build.0 = Release|Any CPU
+		{066EF31F-E8CB-45CA-9DD7-52F81D85A7C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{066EF31F-E8CB-45CA-9DD7-52F81D85A7C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{066EF31F-E8CB-45CA-9DD7-52F81D85A7C3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{066EF31F-E8CB-45CA-9DD7-52F81D85A7C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{066EF31F-E8CB-45CA-9DD7-52F81D85A7C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{066EF31F-E8CB-45CA-9DD7-52F81D85A7C3}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

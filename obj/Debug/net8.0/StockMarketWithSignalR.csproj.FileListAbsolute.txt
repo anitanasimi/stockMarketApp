@@ -121,4 +121,15 @@ C:\Users\Pc\Desktop\Anita\StockMarketWithSignalR\bin\Debug\net8.0\runtimes\win\l
 C:\Users\Pc\Desktop\Anita\StockMarketWithSignalR\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Pc\Desktop\Anita\StockMarketWithSignalR\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\Pc\Desktop\Anita\StockMarketWithSignalR\bin\Debug\net8.0\Newtonsoft.Json.dll
-C:\Users\Pc\Desktop\Anita\StockMarketWithSignalR\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
+C:\Users\Pc\Desktop\Anita\StockMarketWithSignalR\bin\Debug\net8.0\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\Pc\Desktop\Anita\StockMarketWithSignalR\bin\Debug\net8.0\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\Pc\Desktop\Anita\StockMarketWithSignalR\bin\Debug\net8.0\Microsoft.Owin.dll
+C:\Users\Pc\Desktop\Anita\StockMarketWithSignalR\bin\Debug\net8.0\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Pc\Desktop\Anita\StockMarketWithSignalR\bin\Debug\net8.0\Microsoft.Owin.Security.dll
+C:\Users\Pc\Desktop\Anita\StockMarketWithSignalR\bin\Debug\net8.0\Owin.dll
+C:\Users\Pc\Desktop\Anita\StockMarketWithSignalR\bin\Debug\net8.0\StockMarketClientApp\market.frontend\package-lock.json
+C:\Users\Pc\Desktop\Anita\StockMarketWithSignalR\bin\Debug\net8.0\StockMarketClientApp\market.frontend\package.json
+C:\Users\Pc\Desktop\Anita\StockMarketWithSignalR\bin\Debug\net8.0\StockMarketClientApp\market.frontend\public\manifest.json
+C:\Users\Pc\Desktop\Anita\StockMarketWithSignalR\bin\Debug\net8.0\StockMarketClientApp\package-lock.json
+C:\Users\Pc\Desktop\Anita\StockMarketWithSignalR\bin\Debug\net8.0\StockMarketClientApp\package.json
+C:\Users\Pc\Desktop\Anita\StockMarketWithSignalR\obj\Debug\net8.0\StockMarketWithSignalR.sourcelink.json

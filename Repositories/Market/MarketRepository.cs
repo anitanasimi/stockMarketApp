@@ -56,7 +56,7 @@ namespace StockMarketWithSignalR.Repositories.Market
         {
             return await UpdateMarket(new MarketStatistic()
             {
-                CurrencyId = transactionDto.CurrencyId,
+                CurrencyId = Guid.Parse(transactionDto.CurrencyId),
                 OperationType = transactionDto.OperationType,
                 Count = transactionDto.Count,
             });
@@ -83,6 +83,32 @@ namespace StockMarketWithSignalR.Repositories.Market
                     }
                 })
                 .ToListAsync();
+
+            return result;
+        }
+
+        public async Task<MarketDto?> GetMarket(Guid currencyId)
+        {
+            var result = await _db
+                .MarketStates
+                .Where(s=>s.CurrencyId == currencyId)
+                .Include(m => m.Currency)
+                .Select(m => new MarketDto()
+                {
+                    Currency = new CurrencyObj()
+                    {
+                        Id = m.CurrencyId,
+                        Title = m.Currency.Title,
+                        Price = m.Currency.Price
+                    },
+                    Statics = new MarketStaticsObj()
+                    {
+                        TotalPrice = m.TotalPrice,
+                        BuyCount = _db.MarketStatistics.Count(s => s.CurrencyId == m.CurrencyId && s.OperationType == OperationType.Buy),
+                        SellCount = _db.MarketStatistics.Count(s => s.CurrencyId == m.CurrencyId && s.OperationType == OperationType.Sell),
+                    }
+                })
+                .FirstOrDefaultAsync();
 
             return result;
         }
@@ -152,7 +178,7 @@ namespace StockMarketWithSignalR.Repositories.Market
                 return default;
             }
 
-            var result = currency.Coefficient * (marketStatistic.Count * currency.Price);
+            var result = Math.Abs(currency.Coefficient * (marketStatistic.Count * currency.Price));
 
             var newMarketStateTotalPrice = marketStatistic.OperationType switch
             {

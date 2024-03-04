@@ -36,7 +36,7 @@ namespace StockMarketWithSignalR.Jobs
                     await _marketRepository.DoTransaction(new CreateTransactionDto()
                     {
                         Count = count,
-                        CurrencyId = currency.Id,
+                        CurrencyId = currency.Id.ToString(),
                         OperationType = OperationType.Buy
                     });
                 }
@@ -46,7 +46,7 @@ namespace StockMarketWithSignalR.Jobs
                     await _marketRepository.DoTransaction(new CreateTransactionDto()
                     {
                         Count = count,
-                        CurrencyId = currency.Id,
+                        CurrencyId = currency.Id.ToString(),
                         OperationType = OperationType.Sell
                     });
                 }

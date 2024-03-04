@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using StockMarketWithSignalR.Dtos.Market;
-using StockMarketWithSignalR.Hub;
+using StockMarketWithSignalR.Hubs;
 using StockMarketWithSignalR.Repositories.Market;
 
 namespace StockMarketWithSignalR.Controllers
@@ -29,7 +29,7 @@ namespace StockMarketWithSignalR.Controllers
             if (transactionResult)
             {
                 await _marketHub.Clients.All.SendAsync("DoTransaction");
-                await _marketHub.Clients.All.SendAsync("SendMarket");
+                await _marketHub.Clients.All.SendAsync("GetMarket");
                 return Ok(transactionResult);
             }
 
@@ -39,8 +39,11 @@ namespace StockMarketWithSignalR.Controllers
         [HttpGet("")]
         public async Task<IActionResult> GetMarket()
         {
-            var transactionResult = await _marketRepository.GetMarket();
-            return Ok(transactionResult);
+            var market = await _marketRepository.GetMarket();
+
+            await _marketHub.Clients.All.SendAsync("GetMarket", market);
+
+            return Ok();
         }
     }
 }
