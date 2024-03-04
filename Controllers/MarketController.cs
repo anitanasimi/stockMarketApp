@@ -28,12 +28,5 @@ namespace StockMarketWithSignalR.Controllers
 
             return BadRequest(transactionResult);
         }
-
-        [HttpGet("")]
-        public async Task<IActionResult> GetMarket()
-        {
-            var transactionResult = await _marketRepository.GetMarket();
-            return Ok(transactionResult);
-        }
     }
 }

@@ -93,9 +93,8 @@ namespace StockMarketWithSignalR.Repositories.Currency
         /// its an random algorithm 
         /// </summary>
         /// <param name="currencyId"></param>
-        /// <param name="marketStateId"></param>
         /// <returns></returns>
-        public async Task UpdateCurrencyPrice(Guid currencyId, Guid marketStateId)
+        public async Task UpdateCurrencyPrice(Guid currencyId)
         {
             var currency = await GetCurrencyById(currencyId);
             if (currency is null)
@@ -113,7 +112,6 @@ namespace StockMarketWithSignalR.Repositories.Currency
             var res = buyCount - sellCount;
 
             currency.Price += (res * currency.Coefficient);
-            currency.MarketStateId = marketStateId;
 
             await Update(currency);
         }
