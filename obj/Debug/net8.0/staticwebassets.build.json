@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "ETathyEpY6EdJ6UDtCeia0Ku0xWAZW9/0+Qh3qYtwI8=",
+  "Source": "StockMarketWithSignalR",
+  "BasePath": "_content/StockMarketWithSignalR",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "StockMarketWithSignalR\\wwwroot",
+      "Source": "StockMarketWithSignalR",
+      "ContentRoot": "C:\\Users\\Pc\\Desktop\\Anita\\StockMarketWithSignalR\\wwwroot\\",
+      "BasePath": "_content/StockMarketWithSignalR",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
