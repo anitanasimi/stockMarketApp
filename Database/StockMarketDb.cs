@@ -25,13 +25,15 @@ namespace StockMarketWithSignalR.Database
                     {
                         Coefficient = Convert.ToDecimal(1.5),
                         CurrencyCode = 1,
-                        Title = "BitCoin"
+                        Title = "BitCoin",
+                        Price = 60_000
                     },
                     new()
                     {
                         Coefficient = Convert.ToDecimal(1.1),
                         CurrencyCode = 2,
-                        Title = "DogeCoin"
+                        Title = "DogeCoin",
+                        Price = 20
                     }
                 });
             });

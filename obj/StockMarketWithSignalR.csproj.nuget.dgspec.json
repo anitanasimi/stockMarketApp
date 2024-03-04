@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pc\\Desktop\\Anita\\StockMarketWithSignalR\\StockMarketWithSignalR.csproj": {}
+    "C:\\Users\\anita\\Desktop\\2\\StockMarketWithSignalR_AddQuartzAndJobsToUpdateDataAutomaticlyEvery30Sec\\StockMarketWithSignalR\\StockMarketWithSignalR.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pc\\Desktop\\Anita\\StockMarketWithSignalR\\StockMarketWithSignalR.csproj": {
+    "C:\\Users\\anita\\Desktop\\2\\StockMarketWithSignalR_AddQuartzAndJobsToUpdateDataAutomaticlyEvery30Sec\\StockMarketWithSignalR\\StockMarketWithSignalR.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pc\\Desktop\\Anita\\StockMarketWithSignalR\\StockMarketWithSignalR.csproj",
+        "projectUniqueName": "C:\\Users\\anita\\Desktop\\2\\StockMarketWithSignalR_AddQuartzAndJobsToUpdateDataAutomaticlyEvery30Sec\\StockMarketWithSignalR\\StockMarketWithSignalR.csproj",
         "projectName": "StockMarketWithSignalR",
-        "projectPath": "C:\\Users\\Pc\\Desktop\\Anita\\StockMarketWithSignalR\\StockMarketWithSignalR.csproj",
-        "packagesPath": "C:\\Users\\Pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pc\\Desktop\\Anita\\StockMarketWithSignalR\\obj\\",
+        "projectPath": "C:\\Users\\anita\\Desktop\\2\\StockMarketWithSignalR_AddQuartzAndJobsToUpdateDataAutomaticlyEvery30Sec\\StockMarketWithSignalR\\StockMarketWithSignalR.csproj",
+        "packagesPath": "C:\\Users\\anita\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\anita\\Desktop\\2\\StockMarketWithSignalR_AddQuartzAndJobsToUpdateDataAutomaticlyEvery30Sec\\StockMarketWithSignalR\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\anita\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,6 +34,9 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "default"
         }
       },
       "frameworks": {
@@ -69,6 +67,10 @@
               "target": "Package",
               "version": "[1.1.0, )"
             },
+            "Quartz.AspNetCore": {
+              "target": "Package",
+              "version": "[3.8.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
@@ -93,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.7.23376.3\\RuntimeIdentifierGraph.json"
         }
       }
     }

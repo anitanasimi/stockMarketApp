@@ -7,7 +7,7 @@
         public OperationType OperationType { get; set; }
 
         public Guid CurrencyId { get; set; }
-        public Currency Currency { get; set; }
+        public Currency? Currency { get; set; }
     }
 
     public enum OperationType

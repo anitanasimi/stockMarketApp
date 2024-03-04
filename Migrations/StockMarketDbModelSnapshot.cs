@@ -40,6 +40,9 @@ namespace StockMarketWithSignalR.Migrations
                     b.Property<Guid?>("MarketStateId")
                         .HasColumnType("uuid");
 
+                    b.Property<decimal>("Price")
+                        .HasColumnType("numeric");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("text");
@@ -51,18 +54,20 @@ namespace StockMarketWithSignalR.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("b075574b-55db-4f26-96ef-6e7e25cf88e8"),
+                            Id = new Guid("ae1507ec-d52d-4211-ac02-30eebd569cee"),
                             Coefficient = 1.5m,
-                            CreatedAt = new DateTime(2024, 2, 22, 21, 31, 34, 78, DateTimeKind.Utc).AddTicks(2549),
+                            CreatedAt = new DateTime(2024, 2, 23, 15, 57, 35, 726, DateTimeKind.Utc).AddTicks(8816),
                             CurrencyCode = 1,
+                            Price = 60000m,
                             Title = "BitCoin"
                         },
                         new
                         {
-                            Id = new Guid("7b8289bc-11b0-4720-abc6-c15654b4f2ed"),
+                            Id = new Guid("699bb0f8-9b10-4f5e-a98c-39498067edb6"),
                             Coefficient = 1.1m,
-                            CreatedAt = new DateTime(2024, 2, 22, 21, 31, 34, 78, DateTimeKind.Utc).AddTicks(2606),
+                            CreatedAt = new DateTime(2024, 2, 23, 15, 57, 35, 726, DateTimeKind.Utc).AddTicks(8868),
                             CurrencyCode = 2,
+                            Price = 20m,
                             Title = "DogeCoin"
                         });
                 });
