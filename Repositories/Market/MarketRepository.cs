@@ -48,7 +48,7 @@ namespace StockMarketWithSignalR.Repositories.Market
                 return false;
             }
 
-            await _currencyRepository.UpdateCurrencyPrice(marketState.CurrencyId);
+            await _currencyRepository.UpdateCurrencyPrice(marketState.CurrencyId,marketState.Id);
             return true;
         }
 
@@ -60,6 +60,31 @@ namespace StockMarketWithSignalR.Repositories.Market
                 OperationType = transactionDto.OperationType,
                 Count = transactionDto.Count,
             });
+        }
+
+        public async Task<List<MarketDto>> GetMarket()
+        {
+            var result = await _db
+                .MarketStates
+                .Include(m => m.Currency)
+                .Select(m => new MarketDto()
+                {
+                    Currency = new CurrencyObj()
+                    {
+                        Id = m.CurrencyId,
+                        Title = m.Currency.Title,
+                        Price = m.Currency.Price
+                    },
+                    Statics = new MarketStaticsObj()
+                    {
+                        TotalPrice = m.TotalPrice,
+                        BuyCount = _db.MarketStatistics.Count(s=>s.CurrencyId == m.CurrencyId && s.OperationType == OperationType.Buy),
+                        SellCount = _db.MarketStatistics.Count(s=>s.CurrencyId == m.CurrencyId && s.OperationType == OperationType.Sell),
+                    }
+                })
+                .ToListAsync();
+
+            return result;
         }
 
         private async Task<MarketState?> AddMarketState(MarketState marketState)
@@ -101,6 +126,7 @@ namespace StockMarketWithSignalR.Repositories.Market
             try
             {
                 marketState.TotalPrice = newTotalPrice;
+                marketState.ModifiedAt = DateTime.Now.ToUniversalTime();
 
                 _db.MarketStates.Update(marketState);
                 await _db.SaveChangesAsync();

@@ -6,6 +6,10 @@ using StockMarketWithSignalR.Repositories.Market;
 
 namespace StockMarketWithSignalR.Jobs
 {
+    /// <summary>
+    /// This job is created for automatic transactions.
+    /// It's designed to give you the feeling of a real market.
+    /// </summary>
     public class ChangeMarketJob : IJob
     {
         private readonly ICurrencyRepository _currencyRepository;

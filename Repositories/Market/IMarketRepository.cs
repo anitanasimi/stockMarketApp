@@ -7,4 +7,6 @@ namespace StockMarketWithSignalR.Repositories.Market;
 public interface IMarketRepository
 {
     Task<bool> DoTransaction(CreateTransactionDto transactionDto);
+
+    Task<List<MarketDto>> GetMarket();
 }

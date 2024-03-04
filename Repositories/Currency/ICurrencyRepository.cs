@@ -16,5 +16,5 @@ public interface ICurrencyRepository
 
     Task<bool> IsExists(string title,int code);
 
-    Task UpdateCurrencyPrice(Guid currencyId);
+    Task UpdateCurrencyPrice(Guid currencyId,Guid marketStateId);
 }
