@@ -1,6 +1,6 @@
 # Bitcoin Trading App
 
-Welcome to the Bitcoin Trading App! This application allows users to buy and sell Bitcoin in real-time. Below are the details to help you understand and run the application effectively.
+Welcome to the Bitcoin Trading App! This application allows users to buy and sell Bitcoin in real-time.
 
 ## Technologies Used
 - **ASP.NET:** Used for backend development, including creating controllers and integrating with SignalR.
